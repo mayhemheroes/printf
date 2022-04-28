@@ -3,14 +3,14 @@ on:
   push:
   pull_request:
   workflow_dispatch:
-
+  workflow_call:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   build:
-    name: '${{ matrix.os }} shared=${{ matrix.shared }} ${{ matrix.build_type }}'
+    name: ${{ matrix.os }} shared=${{ matrix.shared }} ${{ matrix.build_type }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:

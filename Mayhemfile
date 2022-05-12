@@ -2,4 +2,4 @@ project: jacob-clemente/printf
 target: fuzz_printf
 
 cmds:
-  - cmd: /fuzz_printf @@
+  - cmd: /fuzz_printf

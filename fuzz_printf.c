@@ -6,6 +6,7 @@ void _putchar(char character) {
 }
 
 int main(int argc, const char** argv) {
-	printf_(argv[1]);
+	if (argc > 1)
+		printf_(argv[1]);
 	return 0;
 }

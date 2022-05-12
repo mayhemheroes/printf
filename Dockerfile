@@ -6,10 +6,10 @@ ADD . /printf
 WORKDIR /printf
 
 RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y gcc
+    DEBIAN_FRONTEND=noninteractive apt-get install -y clang
 
 ## TODO: ADD YOUR BUILD INSTRUCTIONS HERE.
-RUN gcc fuzz_printf.c printf.c -o fuzz_printf
+RUN clang -fsanitize=fuzzer fuzz_printf.c printf.c -o fuzz_printf
 
 #Package Stage
 FROM --platform=linux/amd64 ubuntu:20.04

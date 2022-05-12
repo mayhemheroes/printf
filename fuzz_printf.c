@@ -5,8 +5,7 @@ void _putchar(char character) {
 	putchar(character);
 }
 
-int main(int argc, const char** argv) {
-	if (argc > 1)
-		printf_(argv[1]);
-	return 0;
+int LLVMFuzzerTestOneInput(char *data, size_t size) {
+  printf_((const char*) data);
+  return 0;
 }

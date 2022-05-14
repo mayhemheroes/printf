@@ -1,4 +1,4 @@
-project: jacob-clemente/printf
+project: printf
 target: fuzz_printf
 
 cmds:
